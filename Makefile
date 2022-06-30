@@ -6,7 +6,7 @@
 #    By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/30 19:33:35 by jre-gonz          #+#    #+#              #
-#    Updated: 2022/06/30 22:52:07 by jre-gonz         ###   ########.fr        #
+#    Updated: 2022/06/30 22:55:09 by jre-gonz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,3 +84,5 @@ tester: .test/storgb_test.c $(NAME)
 	@echo "\n$(TITLE)Compiling$(YELLOW) tester$(NC)\c"
 	$(COMPILE) $^ -I include -o $@
 	@echo " $(GREEN)[OK]$(NC)"
+	@echo "\n$(TITLE)Executing$(YELLOW) tester$(NC)"
+	@./$@

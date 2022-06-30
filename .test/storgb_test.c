@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 19:48:39 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/06/30 22:49:41 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/06/30 22:54:11 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	storgb_test(char *color, int spected)
 	result = RED KO NC;
 	if (storgb(color) == spected)
 		result = GREEN OK NC;
-	printf("Color: %s -> %s%d%s (%08x) %s\n", color, YELLOW, storgb(color), NC, spected, result);
+	printf("Color: %s -> %s%08x%s (%08x) %s\n", color, YELLOW, storgb(color), NC, spected, result);
 }
 
 int	main(void)
