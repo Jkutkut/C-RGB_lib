@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 18:55:52 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/06/30 19:31:27 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/06/30 19:46:14 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	storgb(char *color_str)
 	semibyte = 8;
 	while (*color_str)
 	{
-		c = hextoc(*color_str);
+		c = ft_hextoc(*color_str);
 		if (c == INVALID)
 			return (0);
 		color |= c << semibyte--;
