@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 19:48:39 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/06/30 22:54:11 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/06/30 23:00:58 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	storgb_test(char *color, int spected)
 	result = RED KO NC;
 	if (storgb(color) == spected)
 		result = GREEN OK NC;
-	printf("Color: %s -> %s%08x%s (%08x) %s\n", color, YELLOW, storgb(color), NC, spected, result);
+	printf("Color: %10s -> %s%08x%s (%08x) %s\n", color, YELLOW, storgb(color), NC, spected, result);
 }
 
 int	main(void)
@@ -47,8 +47,15 @@ int	main(void)
 	storgb_test("0x00000000q", 0x00000000);
 	
 	printf("Test " YELLOW "valid" NC "\n");
-	storgb_test("0x01", 0x01000000);
-	storgb_test("0x0f", 0x0f000000);
-	storgb_test("0xf0", 0xf0000000);
+	storgb_test(      "0x01", 0x01000000);
+	storgb_test(      "0x0f", 0x0f000000);
+	storgb_test(      "0xf0", 0xf0000000);
+	storgb_test(    "0xf000", 0xf0000000);
+	storgb_test(  "0xf00000", 0xf0000000);
+	storgb_test("0xf0000000", 0xf0000000);
+	storgb_test("0xffffffff", 0xffffffff);
+	storgb_test("0xfcfcfcfc", 0xfcfcfcfc);
+	storgb_test("0x12345678", 0x12345678);
+	
 	return (0);
 }
