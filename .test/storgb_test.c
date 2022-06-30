@@ -6,24 +6,31 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 19:48:39 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/06/30 19:57:43 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/06/30 20:15:43 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "rgblib.h"
 
-#define OK "\033[1;32m[OK]\033[0m"
-#define KO "\033[1;31m[KO]\033[0m"
+#define NC "\033[0m"
+#define RED "\033[1;31m"
+#define YELLOW "\033[1;33m"
+#define GREEN "\033[1;32m"
+
+#define OK "[OK]"
+#define KO "[KO]"
+
+#define TEST 
 
 void	storgb_test(char *color, int spected)
 {
 	char	*result;
 
-	result = KO;
+	result = RED KO NC;
 	if (storgb(color) == spected)
-		result = OK;
-	printf("Color: %s -> %08x %s\n", color, spected, result);
+		result = GREEN OK NC;
+	printf("Color: %s -> %s%d%s (%08x) %s\n", color, YELLOW, storgb(color), NC, spected, result);
 }
 
 int	main(void)
