@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 19:11:27 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/06/30 20:05:32 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/06/30 23:05:01 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	is_rgb_str(char *str)
 	if (!str)
 		return (0);
 	len = ft_strlen(str);
-	if (len <= 2 + 2 || len > 8 + 2 || len % 2 != 0)
+	if (len < 2 + 2 || len > 8 + 2 || len % 2 != 0)
 		return (0);
 	if (str[0] != '0' || str[1] != 'x')
 		return (0);
