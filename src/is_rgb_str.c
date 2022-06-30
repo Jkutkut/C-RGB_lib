@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 19:11:27 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/06/30 19:15:49 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/06/30 19:27:38 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	is_rgb_str(char *str)
 		return (0);
 	while (*str)
 	{
-		if ((*str < '0' && *str > '9') || (*str > 'a' && *str < 'b'))
+		if (ft_hextoc(*str) == INVALID)
 			return (0);
 		str++;
 	}
