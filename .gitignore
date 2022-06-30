@@ -2,6 +2,6 @@
 *.out
 *.a
 .test*
-
+tester
 
 bin

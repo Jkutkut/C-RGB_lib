@@ -6,7 +6,7 @@
 #    By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/30 19:33:35 by jre-gonz          #+#    #+#              #
-#    Updated: 2022/06/30 19:46:56 by jre-gonz         ###   ########.fr        #
+#    Updated: 2022/06/30 20:02:59 by jre-gonz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,3 +77,8 @@ fclean: clean
 clean:
 	@echo "- ${RED}Removing${NC} binary directory"
 	@rm -rf $(BIN)
+
+
+# Tests
+tester:
+	$(COMPILE) .test/storgb_test.c rbglib.a -I include -o $@
