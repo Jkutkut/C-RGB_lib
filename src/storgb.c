@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 18:55:52 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/06/30 20:06:03 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/06/30 22:30:31 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,10 @@
  */
 int	storgb(char *color_str)
 {
-	size_t	c_len;
 	int		color;
 	char	c;
 	int		semibyte;
 
-	c_len = ft_strlen(color_str);
 	if (!is_rgb_str(color_str))
 		return (0);
 	color = 0;
