@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 19:48:39 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/06/30 23:17:35 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/07/01 09:05:29 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,11 @@ int	main(void)
 	storgb_test("0xffffffff", 0xffffffff);
 	storgb_test("0xfcfcfcfc", 0xfcfcfcfc);
 	storgb_test("0x12345678", 0x12345678);
-	
-	printf("\nTest " YELLOW "valid 2" NC "\n");
 	storgb_test(    "0xf0f0", 0xf0f00000);
 	storgb_test(    "0x12cb", 0x12cb0000);
 	storgb_test(  "0xf0c0ab", 0xf0c0ab00);
 	storgb_test(  "0xabcdef", 0xabcdef00);
+	storgb_test(  "0x89abcdef", 0x89abcdef);
 	
 	printf("\nTest " YELLOW "invalid" NC "\n");
 	storgb_test(NULL, 0x00000000);
