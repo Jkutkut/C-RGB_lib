@@ -6,7 +6,7 @@
 #    By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/30 19:33:35 by jre-gonz          #+#    #+#              #
-#    Updated: 2022/06/30 22:55:09 by jre-gonz         ###   ########.fr        #
+#    Updated: 2022/07/01 09:24:03 by jre-gonz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,6 +73,7 @@ fclean: clean
 	@echo "- ${RED}Removing${NC} $(NAME)"
 	@rm -f $(NAME)
 	@echo "Project ${YELLOW}rbglib ${GREEN}clean${NC}.\n"
+	@rm -f tester # Tester
 
 clean:
 	@echo "- ${RED}Removing${NC} binary directory"
