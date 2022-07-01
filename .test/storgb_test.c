@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 19:48:39 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/07/01 09:05:29 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/07/01 09:22:37 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,18 +49,21 @@ int	main(void)
 	storgb_test(    "0x12cb", 0x12cb0000);
 	storgb_test(  "0xf0c0ab", 0xf0c0ab00);
 	storgb_test(  "0xabcdef", 0xabcdef00);
-	storgb_test(  "0x89abcdef", 0x89abcdef);
+	storgb_test("0x89abcdef", 0x89abcdef);
 	
 	printf("\nTest " YELLOW "invalid" NC "\n");
-	storgb_test(NULL, 0x00000000);
-	storgb_test("", 0x00000000);
-	storgb_test("0", 0x00000000);
-	storgb_test("0X", 0x00000000);
-	storgb_test("0x0", 0x00000000);
-	storgb_test("0xq", 0x00000000);
-	storgb_test("0x12q", 0x00000000);
-	storgb_test("0x000000000", 0x00000000);
-	storgb_test("0x00000000q", 0x00000000);
+	storgb_test(         NULL, INVALID_COLOR);
+	storgb_test(           "", INVALID_COLOR);
+	storgb_test(          "0", INVALID_COLOR);
+	storgb_test(         "0X", INVALID_COLOR);
+	storgb_test(        "0x0", INVALID_COLOR);
+	storgb_test(        "0xq", INVALID_COLOR);
+	storgb_test(      "0x12q", INVALID_COLOR);
+	storgb_test(       "0a12", INVALID_COLOR);
+	storgb_test(       "ax12", INVALID_COLOR);
+	storgb_test(       "0X12", INVALID_COLOR);
+	storgb_test("0x000000000", INVALID_COLOR);
+	storgb_test("0x00000000q", INVALID_COLOR);
 	
 	return (0);
 }
