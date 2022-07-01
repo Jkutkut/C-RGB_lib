@@ -6,12 +6,25 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 19:11:27 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/06/30 23:05:01 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/07/01 09:12:29 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rgblib.h"
 
+/**
+ * @brief Checks if the given string represents a valid RGBa color.
+ * It should follow any of the given formats:
+ * 
+ * 	0xRR
+ * 	0xRRGG
+ * 	0xRRGGBB
+ * 	0xRRGGBBAA
+ *
+ * @param str String with the color.
+ *
+ * @returns 1 if the color is valid, 0 otherwise.
+ */
 int	is_rgb_str(char *str)
 {
 	size_t	len;
