@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rgblib_test.h                                      :+:      :+:    :+:   */
+/*   rgblib_tester.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/03 11:25:53 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/07/03 11:30:16 by jre-gonz         ###   ########.fr       */
+/*   Created: 2022/07/03 11:28:51 by jre-gonz          #+#    #+#             */
+/*   Updated: 2022/07/03 11:32:12 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef RGBLIB_TEST_H
-#define RGBLIB_TEST_H
+#include "rgblib_test.h"
 
-#include <stdio.h>
-#include "rgblib.h"
-
-#define NC "\033[0m"
-#define RED "\033[1;31m"
-#define YELLOW "\033[1;33m"
-#define GREEN "\033[1;32m"
-
-#define OK "[OK]"
-#define KO "[KO]"
-
-void	storgb_tester(void);
-
-#endif
+int	main(void)
+{
+	storgb_tester();
+}

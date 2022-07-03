@@ -6,7 +6,7 @@
 #    By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/06/30 19:33:35 by jre-gonz          #+#    #+#              #
-#    Updated: 2022/07/01 09:24:03 by jre-gonz         ###   ########.fr        #
+#    Updated: 2022/07/03 11:33:15 by jre-gonz         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,7 +81,7 @@ clean:
 
 
 # Tests
-tester: .test/storgb_test.c $(NAME) 
+tester: .test/storgb_test.c .test/rgblib_tester.c $(NAME) 
 	@echo "\n$(TITLE)Compiling$(YELLOW) tester$(NC)\c"
 	$(COMPILE) $^ -I include -o $@
 	@echo " $(GREEN)[OK]$(NC)"

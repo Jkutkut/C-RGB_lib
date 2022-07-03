@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 19:48:39 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/07/03 11:25:40 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/07/03 11:35:32 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,9 @@ void	storgb_test(char *color, int spected)
 	printf("Color: %11s -> %s%08x%s (%08x) %s\n", color, YELLOW, storgb(color), NC, spected, result);
 }
 
-int	main(void)
+void	storgb_tester(void)
 {
+	printf("\n**************  " YELLOW "storgb" NC "  **************\n");
 	printf("\nTest " YELLOW "valid" NC "\n");
 	storgb_test(      "0x01", 0x01000000);
 	storgb_test(      "0x0f", 0x0f000000);
@@ -54,6 +55,5 @@ int	main(void)
 	storgb_test(       "0X12", INVALID_COLOR);
 	storgb_test("0x000000000", INVALID_COLOR);
 	storgb_test("0x00000000q", INVALID_COLOR);
-	
-	return (0);
+	printf("\n****************************\n");
 }
