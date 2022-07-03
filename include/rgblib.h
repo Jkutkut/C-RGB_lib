@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 18:54:04 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/07/01 09:14:43 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/07/03 12:05:58 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@
 
 // Tools
 size_t	ft_strlen(const char *s);
-char	ft_hextoc(char c);
+int		ft_hextoi(char c);
 
-int	is_rgb_str(char *str);
-int	storgb(char *color_str);
+int		is_rgb_str(char *str);
+int		storgb(char *color_str);
 
 #endif
