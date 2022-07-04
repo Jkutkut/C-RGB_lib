@@ -6,7 +6,7 @@
 /*   By: jre-gonz <jre-gonz@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/04 17:48:33 by jre-gonz          #+#    #+#             */
-/*   Updated: 2022/07/04 18:00:50 by jre-gonz         ###   ########.fr       */
+/*   Updated: 2022/07/04 18:06:22 by jre-gonz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,21 @@ int	get_b(int rgba)
 int	get_a(int rgba)
 {
 	return (rgba & 0xFF);
+}
+
+/**
+ * @brief Obtains the rgba color from the given arguments.
+ * 
+ * All parameters are spected to be in the range [0x00, 0xFF].
+ * 
+ * @param r Red channel.
+ * @param g Green channel.
+ * @param b Blue channel.
+ * @param a Alpha channel.
+ * 
+ * @return int Color result of the union of the channels.
+ */
+int get_rgba(int r, int g, int b, int a)
+{
+	return (r << 24 | g << 16 | b << 8 | a);
 }
